@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Nueva Pradera – El frescor de los campos | Frutería Santa Cruz de Tenerife</title>
+  <meta name="description" content="Frutería La Nueva Pradera en Santa Cruz de Tenerife. Frutas y verduras frescas de temporada con entrega a domicilio. C/ Ramón Trujillo Torres nº13." />
+  <meta name="keywords" content="frutería, Santa Cruz de Tenerife, frutas, verduras, frescas, temporada, entrega a domicilio" />
+  <meta property="og:title" content="La Nueva Pradera – El frescor de los campos" />
+  <meta property="og:description" content="Frutas y verduras frescas de temporada en Santa Cruz de Tenerife. Entrega a domicilio disponible." />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://fruterialapradera.com/" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'gverde':       '#3A7D1E',
+            'gverde-mid':   '#5BA832',
+            'gverde-light': '#7DC142',
+            'gnaranja':     '#E87722',
+            'gnaranja-lt':  '#F5A44B',
+            'sup-verde':    '#F3FAF0',
+            'sup-naranja':  '#FEF5EC',
+          },
+          fontFamily: {
+            brand: ['Caveat', 'cursive'],
+            body:  ['Plus Jakarta Sans', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    html { scroll-behavior: smooth; }
+
+    .nav-shadow { box-shadow: 0 2px 24px rgba(0,0,0,.08); }
+
+    .hero-overlay {
+      background: linear-gradient(to bottom,
+        rgba(0,0,0,.10) 0%,
+        rgba(0,0,0,.45) 55%,
+        rgba(0,0,0,.72) 100%);
+    }
+
+    .card-hover {
+      transition: transform .22s ease, box-shadow .22s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 48px rgba(58,125,30,.13);
+    }
+
+    .mobile-menu { max-height: 0; overflow: hidden; transition: max-height .3s ease; }
+    .mobile-menu.open { max-height: 440px; }
+
+    /* Floating WhatsApp */
+    .wa-float {
+      position: fixed; bottom: 24px; right: 24px; z-index: 999;
+      width: 56px; height: 56px; border-radius: 50%;
+      background: #25D366;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,.45);
+      transition: transform .2s ease;
+    }
+    .wa-float:hover { transform: scale(1.1); }
+
+    /* Section label */
+    .sec-label {
+      display: inline-block;
+      font-size: .75rem; font-weight: 600;
+      letter-spacing: .1em; text-transform: uppercase;
+      color: #E87722;
+      margin-bottom: .5rem;
+    }
+  </style>
+</head>
+
+<body class="bg-white text-gray-800 antialiased">
+
+<!-- ─── WHATSAPP FLOTANTE ────────────────────────────────────────────── -->
+<a href="https://wa.me/34622213993" target="_blank" rel="noopener"
+   aria-label="Pedir por WhatsApp" class="wa-float">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
+</a>
+
+<!-- ─── NAVBAR ───────────────────────────────────────────────────────── -->
+<header id="navbar" class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm transition-shadow duration-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+
+      <!-- Logo texto (reemplaza con <img> cuando tengas el PNG del logo) -->
+      <a href="#inicio" class="flex flex-col leading-none">
+        <span class="font-brand text-gverde font-bold" style="font-size:1.45rem">La Nueva Pradera</span>
+        <span class="font-brand text-gnaranja" style="font-size:.85rem">el frescor de los campos</span>
+      </a>
+
+      <!-- Nav desktop -->
+      <nav class="hidden lg:flex items-center gap-7">
+        <a href="#inicio"        class="text-sm font-semibold text-gray-600 hover:text-gverde transition-colors">Inicio</a>
+        <a href="#nosotros"      class="text-sm font-semibold text-gray-600 hover:text-gverde transition-colors">Nosotros</a>
+        <a href="#productos"     class="text-sm font-semibold text-gray-600 hover:text-gverde transition-colors">Productos</a>
+        <a href="#packs"         class="text-sm font-semibold text-gray-600 hover:text-gverde transition-colors">Packs</a>
+        <a href="#contacto"      class="text-sm font-semibold text-gray-600 hover:text-gverde transition-colors">Contacto</a>
+      </nav>
+
+      <!-- CTA + hamburguesa -->
+      <div class="flex items-center gap-3">
+        <a href="https://wa.me/34622213993" target="_blank" rel="noopener"
+           class="hidden sm:inline-flex items-center gap-2 bg-gnaranja hover:bg-orange-600 text-white text-sm font-bold px-4 py-2.5 rounded-full transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Pedir ahora
+        </a>
+        <button id="menu-toggle" class="lg:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors" aria-label="Abrir menú">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Menú móvil -->
+  <div id="mobile-menu" class="mobile-menu lg:hidden bg-white border-t border-gray-100">
+    <div class="px-4 py-4 space-y-1">
+      <a href="#inicio"    class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-sup-verde hover:text-gverde transition-colors">Inicio</a>
+      <a href="#nosotros"  class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-sup-verde hover:text-gverde transition-colors">Nosotros</a>
+      <a href="#productos" class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-sup-verde hover:text-gverde transition-colors">Productos</a>
+      <a href="#packs"     class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-sup-verde hover:text-gverde transition-colors">Packs</a>
+      <a href="#contacto"  class="block py-2.5 px-3 rounded-lg text-sm font-semibold text-gray-700 hover:bg-sup-verde hover:text-gverde transition-colors">Contacto</a>
+      <div class="pt-2">
+        <a href="https://wa.me/34622213993" target="_blank"
+           class="flex items-center justify-center gap-2 bg-gnaranja text-white text-sm font-bold px-4 py-3 rounded-full w-full">
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- ─── HERO ─────────────────────────────────────────────────────────── -->
+<!-- EDITAR: Cambia src por una foto de mayor resolución cuando la tengas -->
+<section id="inicio" class="relative min-h-screen flex items-end pb-20 lg:pb-32">
+  <div class="absolute inset-0 overflow-hidden">
+    <img src="Screenshot_1.png" alt="Tienda La Nueva Pradera"
+         class="w-full h-full object-cover object-center" loading="eager" />
+    <div class="hero-overlay absolute inset-0"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+    <div class="max-w-2xl">
+
+      <div class="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm border border-white/25
+                  text-white text-xs font-semibold px-3 py-1.5 rounded-full mb-5">
+        <span class="w-2 h-2 rounded-full bg-gverde-light"></span>
+        Santa Cruz de Tenerife · Abierto hoy
+      </div>
+
+      <h1 class="text-white font-extrabold leading-tight mb-4"
+          style="font-size: clamp(2.4rem,6vw,4rem)">
+        La fruta más fresca,<br/>
+        <span style="color:#F5A44B">a tu puerta cada día</span>
+      </h1>
+
+      <p class="text-white/80 text-lg lg:text-xl mb-8 max-w-xl leading-relaxed">
+        Frutas y verduras frescas de temporada seleccionadas con cuidado.
+        Del campo a tu mesa, sin rodeos.
+      </p>
+
+      <div class="flex flex-wrap gap-3">
+        <a href="https://wa.me/34622213993?text=Hola,%20quiero%20hacer%20un%20pedido"
+           target="_blank" rel="noopener"
+           class="inline-flex items-center gap-2 bg-gnaranja hover:bg-orange-600 text-white
+                  font-bold px-6 py-3.5 rounded-full text-base transition-all
+                  hover:shadow-lg hover:shadow-orange-500/30 active:scale-95">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-5 h-5">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Haz tu pedido
+        </a>
+        <a href="#productos"
+           class="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 backdrop-blur-sm
+                  border border-white/40 text-white font-bold px-6 py-3.5 rounded-full text-base transition-all">
+          Ver productos
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Mini horario -->
+      <div class="flex flex-wrap gap-6 mt-10 pt-8 border-t border-white/20">
+        <div>
+          <div class="text-white font-extrabold text-xl leading-none">Lun – Vie</div>
+          <div class="text-white/60 text-xs mt-0.5">7:00 – 20:00</div>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <div class="text-white font-extrabold text-xl leading-none">Sáb – Dom</div>
+          <div class="text-white/60 text-xs mt-0.5">7:00 – 14:30</div>
+        </div>
+        <div class="w-px bg-white/20"></div>
+        <div>
+          <div class="text-white font-extrabold text-xl leading-none">🛵 Domicilio</div>
+          <div class="text-white/60 text-xs mt-0.5">Pedidos por WhatsApp</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── BENEFICIOS ───────────────────────────────────────────────────── -->
+<section id="nosotros" class="py-20 bg-sup-verde">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="sec-label">Por qué elegirnos</span>
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-1">El campo, más cerca que nunca</h2>
+      <p class="text-gray-500 mt-3 max-w-md mx-auto text-sm lg:text-base">
+        Llevamos años trayendo lo mejor de la huerta directamente a Santa Cruz de Tenerife.
+      </p>
+    </div>
+
+    <!-- EDITAR: Cambia iconos y textos si lo necesitas -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <div class="card-hover bg-white rounded-2xl p-7 text-center shadow-sm border border-green-50">
+        <div class="w-14 h-14 bg-sup-verde rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🥬</div>
+        <h3 class="font-bold text-gray-900 text-base mb-2">Fresco cada día</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Recibimos género fresco a diario para garantizar la máxima calidad.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 text-center shadow-sm border border-green-50">
+        <div class="w-14 h-14 bg-sup-verde rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🛵</div>
+        <h3 class="font-bold text-gray-900 text-base mb-2">Entrega a domicilio</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Escríbenos por WhatsApp y te llevamos la compra sin complicaciones.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 text-center shadow-sm border border-green-50">
+        <div class="w-14 h-14 bg-sup-verde rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🌿</div>
+        <h3 class="font-bold text-gray-900 text-base mb-2">Producto de temporada</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Siempre lo que está en su punto. Mejor sabor, mejor precio, más nutritivo.</p>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-7 text-center shadow-sm border border-green-50">
+        <div class="w-14 h-14 bg-sup-verde rounded-2xl flex items-center justify-center mx-auto mb-4 text-3xl">🤝</div>
+        <h3 class="font-bold text-gray-900 text-base mb-2">Trato cercano</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">Somos un negocio familiar. Te conocemos y sabemos lo que necesitas.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── PACKS ─────────────────────────────────────────────────────────── -->
+<!-- EDITAR: Modifica nombre, descripción, precio y enlaces de cada pack -->
+<section id="packs" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="sec-label">Nuestros packs</span>
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-1">Todo lo que necesitas, ya preparado</h2>
+      <p class="text-gray-500 mt-3 max-w-md mx-auto text-sm lg:text-base">
+        Packs pensados para facilitarte la semana. Selección fresca, a buen precio.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-7">
+
+      <!-- Pack 1 -->
+      <div class="card-hover bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
+        <div class="relative h-52 overflow-hidden bg-sup-verde">
+          <img src="Screenshot_18.png" alt="Pack Ensalada Fresca"
+               class="w-full h-full object-cover object-top" loading="lazy" />
+          <span class="absolute top-4 left-4 bg-gverde text-white text-xs font-bold px-3 py-1 rounded-full">Más vendido</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-gray-900 text-lg mb-1.5">Pack Ensalada Fresca</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Lechuga romana, tomate, pepino y cebolla tierna. Todo fresco y listo para usar.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-gverde font-extrabold text-2xl">2,99€</span>
+            <a href="https://wa.me/34622213993?text=Hola,%20quiero%20el%20Pack%20Ensalada%20Fresca"
+               target="_blank" rel="noopener"
+               class="bg-gnaranja hover:bg-orange-600 text-white text-sm font-bold px-4 py-2.5 rounded-full transition-colors">
+              Pedir
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pack 2 -->
+      <div class="card-hover bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
+        <div class="relative h-52 overflow-hidden bg-sup-naranja">
+          <img src="Screenshot_18.png" alt="Pack Familia Semanal"
+               class="w-full h-full object-cover object-center" loading="lazy" />
+          <span class="absolute top-4 left-4 bg-gnaranja text-white text-xs font-bold px-3 py-1 rounded-full">Oferta</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-gray-900 text-lg mb-1.5">Pack Familia Semanal</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Papas, tomates, pimientos, zanahorias y fruta de temporada. Ideal para toda la semana.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-gverde font-extrabold text-2xl">7,99€</span>
+            <a href="https://wa.me/34622213993?text=Hola,%20quiero%20el%20Pack%20Familia%20Semanal"
+               target="_blank" rel="noopener"
+               class="bg-gnaranja hover:bg-orange-600 text-white text-sm font-bold px-4 py-2.5 rounded-full transition-colors">
+              Pedir
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pack 3 -->
+      <div class="card-hover bg-white rounded-3xl overflow-hidden border border-gray-100 shadow-sm">
+        <div class="relative h-52 overflow-hidden bg-sup-verde">
+          <img src="Screenshot_1.png" alt="Pack Smoothie y Zumo"
+               class="w-full h-full object-cover object-center" loading="lazy" />
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-gray-900 text-lg mb-1.5">Pack Smoothie &amp; Zumo</h3>
+          <p class="text-gray-500 text-sm leading-relaxed mb-4">
+            Naranja, zanahoria, manzana y espinacas. Empieza el día con energía de verdad.
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-gverde font-extrabold text-2xl">4,99€</span>
+            <a href="https://wa.me/34622213993?text=Hola,%20quiero%20el%20Pack%20Smoothie"
+               target="_blank" rel="noopener"
+               class="bg-gnaranja hover:bg-orange-600 text-white text-sm font-bold px-4 py-2.5 rounded-full transition-colors">
+              Pedir
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── PRODUCTOS / OFERTAS ───────────────────────────────────────────── -->
+<!-- EDITAR: Actualiza nombre, precio y emoji de cada producto cada semana -->
+<section id="productos" class="py-20 bg-sup-verde">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="sec-label">Esta semana</span>
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-1">Ofertas especiales</h2>
+      <p class="text-gray-500 mt-3 max-w-md mx-auto text-sm lg:text-base">
+        Precios frescos como el producto. Actualizamos las ofertas cada semana.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+
+      <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-green-50">
+        <div class="text-4xl mb-3">🥔</div>
+        <h4 class="font-bold text-gray-800 text-sm mb-1">Papas</h4>
+        <p class="text-gray-400 text-xs mb-3">Para amasar / kg</p>
+        <span class="bg-gverde text-white font-bold text-sm px-3 py-1 rounded-full">1,29€</span>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-green-50">
+        <div class="text-4xl mb-3">🍅</div>
+        <h4 class="font-bold text-gray-800 text-sm mb-1">Tomate medieros</h4>
+        <p class="text-gray-400 text-xs mb-3">Por kg</p>
+        <span class="bg-gverde text-white font-bold text-sm px-3 py-1 rounded-full">0,49€</span>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-green-50">
+        <div class="text-4xl mb-3">🍅</div>
+        <h4 class="font-bold text-gray-800 text-sm mb-1">Tomate ensalada</h4>
+        <p class="text-gray-400 text-xs mb-3">Bandeja</p>
+        <span class="bg-gverde text-white font-bold text-sm px-3 py-1 rounded-full">0,59€</span>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-green-50">
+        <div class="text-4xl mb-3">🥬</div>
+        <h4 class="font-bold text-gray-800 text-sm mb-1">Lechuga romana</h4>
+        <p class="text-gray-400 text-xs mb-3">Unidad</p>
+        <span class="bg-gverde text-white font-bold text-sm px-3 py-1 rounded-full">0,49€</span>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-green-50">
+        <div class="text-4xl mb-3">🥒</div>
+        <h4 class="font-bold text-gray-800 text-sm mb-1">Pepino</h4>
+        <p class="text-gray-400 text-xs mb-3">Unidad</p>
+        <span class="bg-gverde text-white font-bold text-sm px-3 py-1 rounded-full">0,49€</span>
+      </div>
+
+      <div class="card-hover bg-white rounded-2xl p-5 text-center shadow-sm border border-green-50">
+        <div class="text-4xl mb-3">🥦</div>
+        <h4 class="font-bold text-gray-800 text-sm mb-1">Calabacín</h4>
+        <p class="text-gray-400 text-xs mb-3">Por kg</p>
+        <span class="bg-gverde text-white font-bold text-sm px-3 py-1 rounded-full">0,99€</span>
+      </div>
+
+    </div>
+
+    <div class="text-center mt-10">
+      <p class="text-gray-500 text-sm mb-4">¿No ves lo que buscas? Escríbenos, seguro que lo tenemos.</p>
+      <a href="https://wa.me/34622213993" target="_blank" rel="noopener"
+         class="inline-flex items-center gap-2 bg-gverde hover:bg-green-800 text-white font-bold px-7 py-3.5 rounded-full transition-colors">
+        Consultar más productos
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── SOBRE NOSOTROS ────────────────────────────────────────────────── -->
+<section class="py-20 bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+      <!-- Imagen -->
+      <div class="relative">
+        <div class="rounded-3xl overflow-hidden aspect-[4/3]">
+          <img src="Screenshot_1.png" alt="Interior de La Nueva Pradera"
+               class="w-full h-full object-cover" loading="lazy" />
+        </div>
+        <div class="absolute -bottom-4 -right-4 bg-gnaranja text-white rounded-2xl px-5 py-4 shadow-xl">
+          <div class="font-brand text-2xl font-bold leading-none">Abiertos</div>
+          <div class="text-white/80 text-xs mt-0.5">7 días a la semana</div>
+        </div>
+      </div>
+
+      <!-- Texto -->
+      <div>
+        <span class="sec-label">Quiénes somos</span>
+        <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-1 mb-5 leading-tight">
+          Un negocio familiar<br/>con mucho cariño
+        </h2>
+        <div class="space-y-4 text-gray-600 leading-relaxed text-sm lg:text-base">
+          <p>
+            En <strong class="text-gverde">La Nueva Pradera</strong> llevamos años haciendo lo mismo: levantarnos temprano para traerte la fruta y la verdura más fresca que encontramos. Sin complicaciones, sin intermediarios de más.
+          </p>
+          <p>
+            Somos una frutería de barrio en Santa Cruz de Tenerife donde cada cliente es conocido por su nombre. Aquí te asesoramos, te recomendamos lo que está mejor hoy y te buscamos lo que necesitas.
+          </p>
+          <p>
+            Si no puedes pasarte, no pasa nada: pedido por WhatsApp y lo tienes en casa.
+          </p>
+        </div>
+
+        <ul class="mt-7 space-y-3">
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="w-5 h-5 rounded-full bg-gverde flex-shrink-0 flex items-center justify-center">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            Género fresco recibido a diario
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="w-5 h-5 rounded-full bg-gverde flex-shrink-0 flex items-center justify-center">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            Atención personalizada y cercana
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="w-5 h-5 rounded-full bg-gverde flex-shrink-0 flex items-center justify-center">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            Entrega a domicilio en la zona
+          </li>
+          <li class="flex items-center gap-3 text-sm text-gray-700">
+            <span class="w-5 h-5 rounded-full bg-gverde flex-shrink-0 flex items-center justify-center">
+              <svg class="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/>
+              </svg>
+            </span>
+            Frutas y verduras de temporada
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── GALERÍA ───────────────────────────────────────────────────────── -->
+<!-- EDITAR: Añade más imágenes reales del negocio cuando las tengas -->
+<section class="py-20 bg-sup-verde">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-12">
+      <span class="sec-label">Nuestro negocio</span>
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-1">Frescura que se ve</h2>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+      <div class="rounded-3xl overflow-hidden aspect-video">
+        <img src="Screenshot_1.png" alt="Fachada de La Nueva Pradera"
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+      </div>
+      <div class="rounded-3xl overflow-hidden aspect-video">
+        <img src="Screenshot_18.png" alt="Ofertas especiales de la semana"
+             class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ─── CTA BANNER ───────────────────────────────────────────────────── -->
+<section class="py-16 bg-gverde relative overflow-hidden">
+  <div class="absolute -top-12 -right-12 w-48 h-48 bg-gverde-mid rounded-full opacity-40"></div>
+  <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-gverde-mid rounded-full opacity-30"></div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="text-5xl mb-4">🛵</div>
+    <h2 class="text-3xl lg:text-4xl font-extrabold text-white mb-4 leading-tight">
+      ¿Quieres recibirlo en casa?
+    </h2>
+    <p class="text-white/75 text-lg mb-8">
+      Escríbenos por WhatsApp y gestionamos tu pedido sin complicaciones.
+    </p>
+    <div class="flex flex-col sm:flex-row gap-3 justify-center">
+      <a href="https://wa.me/34622213993?text=Hola,%20quiero%20hacer%20un%20pedido"
+         target="_blank" rel="noopener"
+         class="inline-flex items-center justify-center gap-2 bg-white text-gverde font-bold
+                px-7 py-4 rounded-full text-base transition-all hover:shadow-xl hover:scale-105 active:scale-95">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#25D366" class="w-5 h-5">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        622 21 39 93
+      </a>
+      <a href="mailto:lapraderasc@hotmail.es"
+         class="inline-flex items-center justify-center gap-2 bg-gverde-mid hover:bg-green-500
+                text-white font-bold px-7 py-4 rounded-full text-base transition-colors border border-white/20">
+        Escribir email
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── CONTACTO ─────────────────────────────────────────────────────── -->
+<section id="contacto" class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="text-center mb-14">
+      <span class="sec-label">Dónde estamos</span>
+      <h2 class="text-3xl lg:text-4xl font-extrabold text-gray-900 mt-1">Ven a vernos</h2>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+      <!-- Info -->
+      <div class="space-y-5">
+
+        <div class="flex gap-4 p-5 bg-sup-verde rounded-2xl">
+          <div class="w-11 h-11 bg-gverde rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-0.5">Dirección</h4>
+            <p class="text-gray-600 text-sm">C/ Ramón Trujillo Torres nº13</p>
+            <p class="text-gray-600 text-sm">Santa Cruz de Tenerife</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5 bg-sup-verde rounded-2xl">
+          <div class="w-11 h-11 bg-gverde rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-0.5">Teléfono / WhatsApp</h4>
+            <a href="tel:+34622213993" class="text-gverde font-semibold text-sm hover:underline">622 21 39 93</a>
+            <p class="text-gray-400 text-xs mt-0.5">Pedidos también por WhatsApp</p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 p-5 bg-sup-verde rounded-2xl">
+          <div class="w-11 h-11 bg-gverde rounded-xl flex items-center justify-center flex-shrink-0">
+            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+            </svg>
+          </div>
+          <div>
+            <h4 class="font-bold text-gray-900 mb-0.5">Email</h4>
+            <a href="mailto:lapraderasc@hotmail.es" class="text-gverde font-semibold text-sm hover:underline">lapraderasc@hotmail.es</a>
+          </div>
+        </div>
+
+        <!-- Horario -->
+        <!-- EDITAR: Actualiza el horario si cambia -->
+        <div class="p-5 bg-sup-verde rounded-2xl">
+          <h4 class="font-bold text-gray-900 mb-4">Horario</h4>
+          <div class="space-y-2.5">
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Lunes – Viernes</span>
+              <span class="font-semibold text-gray-900">7:00 – 20:00</span>
+            </div>
+            <div class="h-px bg-gray-100"></div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Sábado</span>
+              <span class="font-semibold text-gray-900">7:00 – 14:30</span>
+            </div>
+            <div class="h-px bg-gray-100"></div>
+            <div class="flex justify-between text-sm">
+              <span class="text-gray-600">Domingo</span>
+              <span class="font-semibold text-gray-900">7:00 – 14:30</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Mapa -->
+      <div class="rounded-3xl overflow-hidden shadow-sm" style="height:420px">
+        <iframe
+          src="https://maps.google.com/maps?q=28.4667467,-16.2714275&z=17&output=embed"
+          width="100%" height="100%" style="border:0;" allowfullscreen=""
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Ubicación de La Nueva Pradera en Santa Cruz de Tenerife">
+        </iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ─── FOOTER ───────────────────────────────────────────────────────── -->
+<footer class="bg-gray-900 text-white pt-14 pb-8">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-white/10">
+
+      <!-- Marca -->
+      <div>
+        <div class="mb-4">
+          <div class="font-brand font-bold text-gverde-light" style="font-size:1.55rem;line-height:1.2">La Nueva Pradera</div>
+          <div class="font-brand text-gnaranja" style="font-size:.9rem">el frescor de los campos</div>
+        </div>
+        <p class="text-gray-400 text-sm leading-relaxed mb-5">
+          Frutería familiar en Santa Cruz de Tenerife. Frutas y verduras frescas de temporada, con entrega a domicilio.
+        </p>
+        <div class="flex gap-3">
+          <a href="https://www.facebook.com/FruteriaLaPraderaLaCuesta" target="_blank" rel="noopener"
+             aria-label="Facebook"
+             class="w-9 h-9 bg-white/10 hover:bg-gverde rounded-full flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/fruterialapradera_/" target="_blank" rel="noopener"
+             aria-label="Instagram"
+             class="w-9 h-9 bg-white/10 hover:bg-gverde rounded-full flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+          <a href="https://wa.me/34622213993" target="_blank" rel="noopener"
+             aria-label="WhatsApp"
+             class="w-9 h-9 bg-white/10 hover:bg-[#25D366] rounded-full flex items-center justify-center transition-colors">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Navegación -->
+      <div>
+        <h5 class="font-bold text-white mb-5">Navegación</h5>
+        <ul class="space-y-3">
+          <li><a href="#inicio"    class="text-gray-400 hover:text-white text-sm transition-colors">Inicio</a></li>
+          <li><a href="#nosotros"  class="text-gray-400 hover:text-white text-sm transition-colors">Quiénes somos</a></li>
+          <li><a href="#productos" class="text-gray-400 hover:text-white text-sm transition-colors">Productos y ofertas</a></li>
+          <li><a href="#packs"     class="text-gray-400 hover:text-white text-sm transition-colors">Packs</a></li>
+          <li><a href="#contacto"  class="text-gray-400 hover:text-white text-sm transition-colors">Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Contacto rápido -->
+      <div>
+        <h5 class="font-bold text-white mb-5">Contacto</h5>
+        <ul class="space-y-3 text-sm text-gray-400">
+          <li class="flex gap-2 items-start">
+            <span>📍</span>
+            <span>C/ Ramón Trujillo Torres nº13,<br/>Santa Cruz de Tenerife</span>
+          </li>
+          <li class="flex gap-2">
+            <span>📱</span>
+            <a href="tel:+34622213993" class="hover:text-white transition-colors">622 21 39 93</a>
+          </li>
+          <li class="flex gap-2">
+            <span>✉️</span>
+            <a href="mailto:lapraderasc@hotmail.es" class="hover:text-white transition-colors">lapraderasc@hotmail.es</a>
+          </li>
+          <li class="flex gap-2">
+            <span>🕐</span>
+            <span>Lun–Vie: 7–20h · Sáb–Dom: 7–14:30h</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="flex flex-col sm:flex-row justify-between items-center gap-3 pt-6">
+      <p class="text-gray-500 text-xs">
+        © <span id="year"></span> La Nueva Pradera. Todos los derechos reservados.
+      </p>
+      <div class="flex gap-5">
+        <a href="#" class="text-gray-500 hover:text-gray-300 text-xs transition-colors">Política de privacidad</a>
+        <a href="#" class="text-gray-500 hover:text-gray-300 text-xs transition-colors">Aviso legal</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+
+<!-- ─── SCRIPTS ──────────────────────────────────────────────────────── -->
+<script>
+  // Año automático en footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Menú móvil
+  const toggle = document.getElementById('menu-toggle');
+  const menu   = document.getElementById('mobile-menu');
+  toggle.addEventListener('click', () => menu.classList.toggle('open'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.remove('open')));
+
+  // Sombra navbar al hacer scroll
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('nav-shadow', window.scrollY > 10);
+  });
+</script>
+
+</body>
+</html>
