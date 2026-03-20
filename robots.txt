@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kevinelectronics.github.io/lanuevapradera/sitemap.xml
